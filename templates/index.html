@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/refresh.css') }}">
     <!-- Link Module -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/module/header-menu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module/accodrion.css') }}">
 
     <title>Stellar</title>
 </head>
@@ -30,7 +31,7 @@
         </div>
 
         <div class="text-frame">
-            <h1 class="title-design">Stellar</h1>
+            <h1 class="title-design-1">Stellar</h1>
             <label class="under-title-design">Learn different programming languages with stellar.</label>
             <div class="button-frame">
                 <button class="button-design-1 hover" onclick="location.href='https://github.com/sharky-2/';">Explore Open-Source Projects</button>
@@ -45,6 +46,83 @@
         </div>
     </header>
 
+    <section style="margin-top: 400px;">
+        <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
+        <div><h1 class="title-design-2">Learn faster. Build better.</h1></div>
+        <div><label class="code-text-design">text-base text-white</label></div>
+        <div><label class="text-design-2">Stellar provides you with all the tools and resources to learn full-stack development efficiently. From interactive tutorials to hands-on projects, we help you become a better developer.</label></div>
+        <div></div>
+        <div><button class="button-design-2 hover">Explore Stellar Plus</button></div>
+    </section>
+    <section>
+        <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
+        <div><h1 class="title-design-2">Code freely without managing CSS files manually.</h1></div>
+        <div></div>
+        <div><img src="/static/Img/Img/code.png" width="100%"></div>
+        <div></div>
+    </section>
+    <section>
+        <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
+        <div><h1 class="title-design-2">Created for modern developers.</h1></div>
+        <div><label class="code-text-design">text-base text-white</label></div>
+        <div><label class="text-design-2">Stellar embraces modern technologies to help you learn how real-world development works. Explore everything from HTML, CSS, and JavaScript to backend tools like Python, Node.js, and databases.</label></div>
+        <div></div>
+
+        <div style="align-items: start; padding: 0;">
+
+            <div id="accordion-list">
+                <div class="item text-design-2">
+                    <div class="question">
+                        <label class="text">What can I learn on Stellar?</label>
+                        <div class="dropdown">></div>
+                    </div>
+                    <div class="answer">Stellar covers HTML, CSS, JavaScript, Python, Node.js, React, SQL, and much more—from front-end design to back-end logic.</div>
+                </div>
+                <div class="item text-design-2">
+                    <div class="question">
+                        <label class="text">Is it beginner friendly?</label>
+                        <div class="dropdown">></div>
+                    </div>
+                    <div class="answer">Yes! Whether you're just starting out or looking to expand your skills, Stellar is built for learners of all levels.</div>
+                </div>
+            </div>
+            <div id="accordion-list">
+                <div class="item text-design-2">
+                    <div class="question">
+                        <label class="text">Are there real coding projects?</label>
+                        <div class="dropdown">></div>
+                    </div>
+                    <div class="answer">Yes. Practice your skills with real-life coding challenges and projects to build a solid portfolio.</div>
+                </div>
+                <div class="item text-design-2">
+                    <div class="question">
+                        <label class="text">Do I need any experience?</label>
+                        <div class="dropdown">></div>
+                    </div>
+                    <div class="answer">No experience is required. We guide you step by step through each concept and project.</div>
+                </div>
+            </div><div id="accordion-list">
+                <div class="item text-design-2">
+                    <div class="question">
+                        <label class="text">What is Stellar Plus?</label>
+                        <div class="dropdown">></div>
+                    </div>
+                    <div class="answer">Stellar Plus offers exclusive advanced content, UI components, and extra resources for passionate developers.</div>
+                </div>
+                <div class="item text-design-2">
+                    <div class="question">
+                        <label class="text">How do I get started?</label>
+                        <div class="dropdown">></div>
+                    </div>
+                    <div class="answer">Simply start browsing our learning materials and projects—no signup required to begin your journey.</div>
+                </div>
+            </div>
+        </div>
+
+        <div></div>
+    </section>
+
     <script src="/static/script/header-menu.js"></script>
+    <script src="/static/script/accordion.js"></script>
 </body> 
 </html>
