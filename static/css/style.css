@@ -1,0 +1,217 @@
+html {scroll-behavior: smooth; overflow-x: hidden;}
+body {
+    background-color: var(--MainColor);
+    color: var(--TextColor);
+
+    min-height: 100vh;
+    width: 1200px;
+    padding: 0;
+    margin: auto;
+
+    font-family: var(--NormalType);
+}
+
+section {
+    background: none;
+    height: 100vh;
+    width: 100%;
+    position: relative;    
+}
+
+.BackToTop {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+/* ------------------------------------------------------------------ */
+/* First */
+.First header {
+    height: 120px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.First header img {width: 200px; margin-right: auto;}
+.First header:hover a input:not(:hover) {opacity: 0.5;}
+
+.PlanetShadow {
+    background-color: var(--MainColor);
+    opacity: 0.4;
+    box-shadow: 25px -50px 40px var(--TextColor);
+    position: absolute;
+
+    height: 1100px;
+    width: 1100px;
+
+    border-radius: 100%;
+    top: 68%;
+    left: 5%;
+}
+
+/* ------------------------------------------------------------------ */
+/* Second */
+.Second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TextFrames {
+    background: none;
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.CardFrames {
+    color:  black;
+    height: 500px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: relative;
+}
+
+@media (min-width: 500px) {
+    .CardFrames .Card {
+        background-color: var(--TextColor);
+        height: 80%;
+        width: 30%;
+        padding: 10px;
+        border-radius: 20px;
+        transition: all 0.3s ease-in-out;
+        margin: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .CardFrames:hover .Card:not(:hover) {
+        opacity: 0.5;
+        width: 15%;
+    }
+
+    .CardFrames .Card:hover {
+        z-index: 10;
+        width: 120%;
+        font-size: 100%;
+    }
+    .CardFrames .Card lable {transition: all 0.3s;}
+    .CardFrames .Card:hover lable {
+        font-size: 100%;
+    }
+    .CardFrames .Card h1 {
+        width: auto;
+        transition: all 0.3s;
+    }
+    .CardFrames .Card:hover h1 {
+        transform: rotate(0deg);
+    }
+
+    .CardFrames:not(:hover) .Card:nth-child(4) {
+        width: calc((var(--count) / 2) * 50%);
+        font-size: 100%;
+    }
+
+    .CardFrames .Card h1 {
+        transform: rotate(-90deg);
+    }
+    .CardFrames .Card lable {
+        font-size: 0px;
+    }
+    .CardTextLable {
+        text-align: left;
+    }
+}
+
+
+/* ------------------------------------------------------------------ */
+/* Fourth */
+.Fourth {
+    position: relative;
+}
+.Fourth .Bubble {
+    background-color: var(--TextColor);
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    position: absolute;
+
+}
+
+.TextCard {
+    height: auto;
+    padding: 10px;
+    display: flex;
+
+    margin: 20px 0;
+}
+.TextCard img {
+    width: 200px;
+    object-fit:contain;
+}
+
+.ThreeCardFrame {
+    height: 400px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ThreeCardFrame .Card {
+    background-color: var(--TextColor);
+    color: var(--MainColor);
+    height: 90%;
+    width: 33%;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 20px;
+
+    transition: all 0.3s;
+
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+}
+.ThreeCardFrame img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: -10px;
+}
+.ThreeCardFrame input {
+    background: none;
+    border: none;
+
+    width: 100%;
+    font-size: var(--MainColor);
+    cursor: pointer;
+}
+.ThreeCardFrame:hover .Card:not(:hover) {
+    opacity: 0.5;
+}
+.ThreeCardFrame .Card:hover {
+    transform: translateY(-20px);
+}

@@ -1,0 +1,120 @@
+/* ------------------------------------------------------------------ */
+/* Local Designs */
+:root {
+    /* Colors */
+    --MainColor: #000000;
+    --TextColor: #ffffff;
+
+    /* Text Fonts */
+    --TitleFont: 80px;
+    --UnderTitleFont: 20px;
+    --TextFont: 15px;
+    --SmallFont: 15px;
+
+    /* Font Type */
+    --NormalType: "Gill Sans", sans-serif;
+    --SpecialType: "Format_1452";
+}
+
+/* ------------------------------------------------------------------ */
+/* Hover Button Design */
+.ButtonDesign {
+    background: none;
+    position: relative;
+
+    min-width: 100px;
+    width: auto;
+    height: 45px;
+
+    margin: 25px;
+    padding-inline: 10px;
+
+    z-index: 10;
+    transition: all 0.3s;
+}
+input[type="button"] {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+.ButtonDesign::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    border-radius: 100px;
+    z-index: -2;
+
+    left: -20px;
+    bottom: -5px;
+    transition: all 0.3s;
+
+}
+.ButtonDesign::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(216, 216, 216);
+    height: 50px;
+    width: 100%;
+    border-radius: 100px;
+    z-index: -1;
+
+    right: -20px;
+    top: -5px;
+    transition: all 0.3s;
+}
+/* .ButtonHoverDesign::after {
+    content: "";
+    background-color: var(--TextColor);
+    height: 2px;
+    width: 0;
+    opacity: 0;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    transition: all 0.3s;
+}
+.ButtonHoverDesign:hover::after {
+    opacity: 1;
+    width: 100%;
+} */
+.ButtonHoverDesign:hover {
+    transform: scale(1.1);
+}
+.ButtonDesign:hover::after {top: -10px;}
+.ButtonDesign:hover::before {bottom: -10px;}
+
+/* ------------------------------------------------------------------ */
+/* Text Designs / Frames */
+.TitleText {
+    font-family: var(--SpecialType);
+    font-size: var(--TitleFont);
+}
+.UnderTitleText {
+    font-family: var(--NormalType);
+    font-size: var(--UnderTitleFont);
+    text-transform: uppercase;
+    margin-top: -70px;
+}
+.TextFrame {
+    font-family: var(--NormalType);
+    font-size: var(--TextFont);
+}
+
+.InputButtonDesign {
+    background: none;
+    color: var(--TextColor);
+    outline: none;
+    border: none;
+
+    height: 100%;
+    width: 100%;
+    font-size: var(--SmallFont);
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+

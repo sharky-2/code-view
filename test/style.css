@@ -1,0 +1,359 @@
+/* COLORS */
+:root {
+    --background: #e8e4dc;
+    --line: #bcb4b4;
+}
+
+/* BODY */
+body {
+    background-color: var(--background);
+    height: auto;
+    width: 1080px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+
+    padding-bottom: 50px;
+
+    font-family: monospace;
+}
+
+.TitleDesign {
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.TextDesign {
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.ButtonDesign2 {
+    background: none;
+    color: black;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    
+    font-weight: bold;
+    font-size: 15px;
+}
+.ButtonDesign2::before {
+    content: "";
+    background-color: var(--line);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    transition: all 0.3s;
+}
+.ButtonDesign2::after {
+    content: "";
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    transition: all 0.3s;
+}
+.ButtonDesign2:hover::before {
+    transform: translateY(-5px) translateX(-5px);
+}
+.ButtonDesign2:hover::after {
+    transform: translateY(5px) translateX(5px);
+}
+.header {
+    height: 100vh;
+    width: 80%;
+    position: relative;
+}
+.line {
+    background-color: var(--line);
+    position: absolute;
+    border-radius: 100px;
+    height: 90%;
+    width: 2px;
+    right: 390px;
+    animation: Line1 5s forwards;
+}
+.line::before {
+    content: "";
+    position: absolute;
+    background-color: var(--line);
+    height: 2px;
+    width: 200px;
+    left: 0;
+    top: 70%;
+    animation: Line2 5s forwards;
+}
+@keyframes Line1 {
+    from {
+        height: 0;
+    } to {
+        height: 90%;
+    }
+}
+@keyframes Line2 {
+    0% {
+        width: 0px;
+    } 80% {
+        width: 0px;
+    } 100% {
+        width: 200px;
+    }
+}
+.title {
+    position: absolute;
+    font-size: 50px;
+    top: 50px;
+    left: 100px;
+    text-transform: uppercase;
+}
+.underTitle {
+    position: absolute;
+    font-size: 20px;
+    left: 100px;
+    top: 100px;
+}
+.TextFrame {
+    position: absolute;
+    width: 250px;
+    font-size: 15px;
+    bottom: 13%;
+    right: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.ButtonDesign input {
+    background: none;
+    border: none;
+    height: 30px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    margin-top: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.ButtonDesign::before {
+    content: "";
+    position: absolute;
+    background-color: var(--line);
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+
+    transition: all 0.3s;
+}
+.ButtonDesign:hover::before {
+    width: 50%;
+}
+.header img {
+    width: 40px;
+    border-radius: 100px;
+    position: absolute;
+    left: 50px;
+    top: 60px;
+}
+
+.TextModule {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.TextModule::before {
+    content: "";
+    background: linear-gradient(
+        90deg,
+        var(--background),
+        var(--line),
+        var(--background)
+    );
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.TextModule::after {
+    content: "";
+    background: linear-gradient(
+        90deg,
+        var(--background),
+        var(--line),
+        var(--background)
+    );
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.ImgModule {
+    height: 550px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ImgModule .One, .Two, .Three {
+    height: 80%;
+    width: 35%;
+    margin: 15px;
+}
+.ImgModule .Two, .Three {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.ImgModule .One {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.ImgModule .One .Top {
+    background-color: white;
+    height: 28%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.ImgModule .One .Bottom {
+    background-color: white;
+    height: 65%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.ImgModule img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.ImgModule .One .Top:hover {
+    transform: translateY(-20px); box-shadow: 0 0 50px rgb(0, 0, 0, 0.1);
+}
+.ImgModule .One .Bottom:hover {
+    transform: translateY(-20px); box-shadow: 0 0 50px rgb(0, 0, 0, 0.1);
+}
+.ImgModule .Two:hover, .Three:hover {
+    transform: translateY(-20px); box-shadow: 0 0 50px rgb(0, 0, 0, 0.1);
+}
+
+.ButtonModule {
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ButtonModule .frame {
+    width: 80%;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+.ButtonModule .frame h1 {
+    margin-bottom: 0px;
+}
+
+.BubbleFrame {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BubbleFrame .frame {
+    width: 50%;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.Bubble {
+    background-color: var(--line);
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    position: relative;
+    animation: BubbleAnimation 5s infinite;
+    object-fit: cover;
+}
+.Bubble::after {
+    content: "";
+    background: url("noImg.jpg");
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 100%;
+    transition: all 0.3s;
+    animation: BubbleAnimation3 5s infinite;
+    
+}
+.Bubble::before {
+    content: "";
+    background-color: rgba(187, 187, 187, 0.5);
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    border-radius: 100%;
+    transition: all 0.3s;
+    animation: BubbleAnimation2 5s infinite;
+}
+@keyframes BubbleAnimation {
+    0% {
+        transform: translateY(70px) translateX(150px);
+    } 50% {
+        transform: translateY(30px) translateX(-20px);
+    } 100% {
+        transform: translateY(70px) translateX(150px);
+    }
+}
+@keyframes BubbleAnimation2 {
+    0% {
+        transform: translateY(20px) translateX(-70px);
+    } 50% {
+        transform: translateY(-20px) translateX(200px);
+    } 100% {
+        transform: translateY(20px) translateX(-70px);
+    }
+}
+@keyframes BubbleAnimation3 {
+    0% {
+        transform: translateY(-50px) translateX(100px);
+    } 50% {
+        transform: translateY(-100px) translateX(-50px);
+    } 100% {
+        transform: translateY(-50px) translateX(100px);
+    }
+}
+.Bubble:hover, .Bubble:hover::after, .Bubble:hover::before {
+    animation-play-state: paused;
+}

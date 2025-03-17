@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="x-icon" href="../static/Img/Logos/BlackIcon_Logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Design.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Animation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Open.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Mobile.css') }}">
+
+    <link rel="stylesheet" href="../static/css/Design.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/Animation.css">
+    <link rel="stylesheet" href="../static/css/Open.css">
+
+    <link rel="stylesheet" href="../static/css/Mobile.css">
+
+    <title>Stellar AI</title>
+</head>
+<body>
+<form method="post" action="/">
+    
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Header/Top -->
+    <section class="First">
+        <!--  -->
+
+        <!-- Menu -->
+        <header class="OpenAnimation_Header">
+            <img src="../static/Img/Logos/WhiteText_Logo.png">
+            <a href="/Test" class="ButtonDesign ButtonHoverDesign HeaderAnim_1"><input type="button" value="Test" class="InputButtonDesign"></a>
+            <a href="#" class="ButtonDesign ButtonHoverDesign HeaderAnim_2"><input type="button" value="Learn" class="InputButtonDesign"></a>
+            <a href="/Create-Page" class="ButtonDesign ButtonHoverDesign HeaderAnim_3"><input type="button" value="Create Page" class="InputButtonDesign"></a>
+            <a href="#" class="ButtonDesign ButtonHoverDesign HeaderAnim_4"><input type="button" value="Sign In" class="InputButtonDesign"></a>
+        </header>
+
+        <!-- Text -->
+        <div class="TextFrames">
+            <h1 class="TitleText TitleMainAnim"> 
+                <a id="headerTitle" onclick="cylceTypingEffect()">EASILY CREATE PAGE</a>
+                <br><c style="text-shadow: none;">with</c> STELLAR AI</h1>
+            <label class="UnderTitleText TextMainAnim">Sign in to unlock exclusive content and gain deeper insights. Join our journey among the stars as we explore infinity and discover the wonders of the universe</label>
+            <a href="#" class="ButtonDesign ButtonHoverDesign ButtonMainAnim"><input type="button" value="Learn more" class="InputButtonDesign"></a>
+        </div>
+
+        <!-- Planet Shadow -->
+        <div class="PlanetShadow PlanetMainAnim"></div>
+
+    </section>
+    
+
+    <script src="{{ url_for('static', filename='script/TypingEffect.js') }}"></script>
+
+</form>
+</body> 
+</html>

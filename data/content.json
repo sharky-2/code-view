@@ -1,0 +1,66 @@
+{
+  "_comment1": "---------------------------------------------------------------------------------------------------------------",
+  "_comment2": "Page 1",
+  "TestPage": [
+    {
+      "type": "TitleCard",
+      "title": "Introduction to Python",
+      "text": "Python is a versatile programming language used in many fields like web development, data science, automation, and more.",
+      "img": "",
+      "button": "Learn More"
+    },
+    {
+      "type": "TitleCard",
+      "title": "Python Syntax",
+      "text": "Python syntax is simple and readable, making it a popular choice for beginners and professionals alike.",
+      "img": ""
+    },
+    {
+      "type": "TitleCard",
+      "title": "Python Libraries",
+      "text": "Python has a rich ecosystem of libraries such as NumPy, pandas, and Flask that help in various domains.",
+      "img": "",
+      "button": "Learn More"
+    },
+    {
+      "type": "Card",
+      "title": "Python for Data Science",
+      "text": "Python is widely used in data science for tasks like data manipulation, analysis, and machine learning.",
+      "img": "",
+      "button": "Learn More"
+    }
+  ],
+
+  "_comment3": "---------------------------------------------------------------------------------------------------------------",
+  "_comment4": "Page 2",
+  "testLibary2": [
+    {
+      "type": "TitleCard",
+      "title": "Python Basics",
+      "text": "Get started with the fundamentals of Python programming, from variables and loops to functions.",
+      "img": "",
+      "button": "Learn More"
+    },
+    {
+      "type": "Card",
+      "title": "python",
+      "text": "Python can be used to automate repetitive tasks, saving time and effort in everyday work.",
+      "img": "https://science.nasa.gov/wp-content/uploads/2023/09/web-first-images-release.png?w=1024",
+      "button": "Learn More"
+    },
+    {
+      "type": "TextCard",
+      "title": "About Python",
+      "text": "Python is a powerful and versatile programming language that can be used to automate repetitive tasks, saving time and effort in everyday work. One of Python's greatest strengths is its simplicity and readability, which allows both beginners and experienced developers to create scripts that can automate routine processes. Whether you are managing files, performing data analysis, or automating web interactions, Python's wide array of libraries and frameworks provides the tools necessary to accomplish these tasks. For example, Python's built-in modules like `os` and `shutil` make it easy to manipulate files and directories. You can automatically move, rename, or delete files with just a few lines of code, which can save a significant amount of time compared to performing these tasks manually. Python also allows for web scraping with libraries such as `BeautifulSoup` or `Selenium`, enabling you to gather data from websites without manually browsing them. This can be especially useful for monitoring product prices, collecting market data, or extracting specific information for research purposes. In addition to file manipulation and web scraping, Python excels in automating repetitive data-related tasks. For example, using the `pandas` library, you can automate data cleaning, transformation, and analysis. With just a few commands, you can read large datasets, clean and filter the data, and even generate reports in various formats like Excel or CSV. This drastically reduces the time spent on manual data processing and ensures consistency and accuracy. Moreover, Python's integration with APIs allows it to automate interactions with web services, including social media management, sending emails, or interacting with cloud-based applications. For example, you can schedule posts on social media platforms, send personalized emails to clients, or automate backup processes for your data storage systems. In summary, Python's ability to automate tasks is not only a time-saver but also an opportunity to increase productivity and focus on more critical aspects of work.",
+      "img": "https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/python/logo.png",
+      "button": "Learn More"
+    },
+    {
+      "type": "ThreeCards",
+      "title": "Python",
+      "text": "Python can be used to automate repetitive tasks, saving time and effort in everyday work.",
+      "img": "https://media.istockphoto.com/id/481229372/photo/spiral-galaxy-illustration-of-milky-way.jpg?s=612x612&w=0&k=20&c=O-OKRJWM_XhGv48z6OhOj_tKBwEaDsvhYKguEN1yuJM=",
+      "button": "Learn More"
+    }
+  ]
+}

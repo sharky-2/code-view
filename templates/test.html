@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="x-icon" href="../static/Img/Logos/BlackIcon_Logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Design.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Animation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Open.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Mobile.css') }}">
+
+    <link rel="stylesheet" href="../static/css/Design.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/Animation.css">
+    <link rel="stylesheet" href="../static/css/Open.css">
+
+    <link rel="stylesheet" href="../static/css/Mobile.css">
+
+    <title>Test</title>
+</head>
+<body>
+    <section class="First" style="height: 100px;">
+        <!-- Menu -->
+        <header class="OpenAnimation_Header">
+            <img src="../static/Img/Logos/WhiteText_Logo.png">
+            <a href="/" class="ButtonDesign ButtonHoverDesign HeaderAnim_1"><input type="button" value="Main" class="InputButtonDesign"></a>
+            <a href="#" class="ButtonDesign ButtonHoverDesign HeaderAnim_2"><input type="button" value="Learn" class="InputButtonDesign"></a>
+            <a name="Create-Page" class="ButtonDesign ButtonHoverDesign HeaderAnim_3"><input type="button" value="Create Page" class="InputButtonDesign"></a>
+            <a href="#" class="ButtonDesign ButtonHoverDesign HeaderAnim_4"><input type="button" value="Sign In" class="InputButtonDesign"></a>
+        </header>
+    </section>
+    {{ modules|safe }}
+
+</body>
+</html>
