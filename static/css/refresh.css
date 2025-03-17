@@ -1,0 +1,22 @@
+.text-frame {animation: text_anim 2s linear forwards;}
+@keyframes text_anim {
+    to {
+        height: 550px;
+    }
+}
+.code-img {animation: img_anim 1s forwards;}
+.code-css-img {animation: img_anim_css 2.6s forwards, moving_anim_css 3.3s infinite alternate;}
+.code-menu-img {animation: img_anim_menu 3.3s forwards, moving_anim_menu 3s infinite alternate;}
+@keyframes img_anim {to {bottom: -25%;}}
+@keyframes img_anim_css {to {transform: translateX(50px) translateY(-120px);}}
+@keyframes img_anim_menu {to {transform: translateY(20px) translateX(30px);}}
+/* @keyframes moving_anim_css {
+    to {
+        transform: translateX(20px) translateY(-50px) translateZ(20px);
+    }
+}
+@keyframes moving_anim_menu {
+    to {
+        transform: translateX(50px) translateY(-50px) translateZ(100px);
+    }
+} */

@@ -23,3 +23,52 @@ body {
     text-align: center;
     line-height: 25px;
 }
+
+.button-design-1 {
+    background: none;
+    color: var(--black);
+
+    font-family: var(--text-font);
+    font-size: 20px;
+    padding: 5px 30px;
+    width: fit-content;
+
+    outline: none;
+    border: 1px solid;
+    border-radius: 100px;
+}
+.button-design-2 {
+    background-color: var(--black);
+    color: var(--white);
+
+    font-family: var(--text-font);
+    font-size: 20px;
+    padding: 5px 30px;
+    width: fit-content;
+
+    outline: none;
+    border: none;
+    border-radius: 100px;
+}
+
+.hover {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover:hover {
+    transform: scale(1.1);
+    animation: glitch .3s ease forwards;
+}
+
+@keyframes glitch {
+    25% {
+        transform: translateX(10px) translateY(2px);
+    } 50% {
+        transform: translateX(-15px) translateY(5px);
+        padding: 5px 50px;
+    } 80% {
+        transform: translateY(-5px);
+    }
+}
+  

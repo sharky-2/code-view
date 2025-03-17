@@ -9,16 +9,8 @@ header {
     position: relative;
 
 }
-header .menu-frame {
-    height: 80px;
-    width: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 header .text-frame {
-    height: 550px;
+    height: 0px;
     width: 100%;
 
     display: flex;
@@ -27,6 +19,18 @@ header .text-frame {
     flex-direction: column;
 
     position: relative;
+
+    gap: 10px;
+    overflow: hidden;
+}
+header .text-frame img {width: 50px;}
+header .text-frame .button-frame {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 header h1 {
     position: relative; 
@@ -69,8 +73,8 @@ header .code-img {
     width: 200%;
 
     position: absolute;
-    left: -50%;
-    bottom: -20%;
+    left: -30%;
+    bottom: -100%;
     z-index: -1;
     opacity: .8;
 
@@ -108,4 +112,34 @@ header .code-img::after {
     left: 0;
     bottom: 0;
     z-index: 1;
+}
+header .code-css-img {
+    background: url("/static/Img/Img/code-css.png") no-repeat bottom;
+    background-size: contain;
+    height: 700px;
+    width: 200%;
+
+    position: absolute;
+    left: -30%;
+    bottom: 0%;
+    z-index: -1;
+
+    transform: rotate3d(2, 3, -1, 0deg) translateX(500px) translateY(-120px) translateZ(100px);
+    filter: drop-shadow(0 0 0.75rem var(--black));
+    z-index: 10;
+}
+header .code-menu-img {
+    background: url("/static/Img/Img/code-menu.png") no-repeat bottom;
+    background-size: contain;
+    height: 700px;
+    width: 200%;
+
+    position: absolute;
+    left: -90%;
+    bottom: 0%;
+    z-index: -1;
+
+    transform: rotate3d(2, 3, -1, 0deg) translateX(-300px) translateY(200px) translateZ(100px);
+    filter: drop-shadow(0 0 0.75rem var(--black));
+    z-index: 10;
 }

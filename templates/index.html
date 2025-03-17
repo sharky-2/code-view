@@ -14,22 +14,37 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/root.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/refresh.css') }}">
+    <!-- Link Module -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module/header-menu.css') }}">
 
     <title>Stellar</title>
 </head>
 <body>
 
     <header>
-        <div class="menu-frame"></div>
+        <div class="header-frame" id="header-frame">
+            <button id="header-button-1" style="order: 1;">Home</button>
+            <button id="header-button-2" style="order: 2;">Programming Lenguages</button>
+            <button id="header-button-3" style="order: 3;">About</button>
+        </div>
+
         <div class="text-frame">
             <h1 class="title-design">Stellar</h1>
-            <label class="under-title-design">Learn diffrent programming lenguages with stellar.</label>
-
+            <label class="under-title-design">Learn different programming languages with stellar.</label>
+            <div class="button-frame">
+                <button class="button-design-1 hover" onclick="location.href='https://github.com/sharky-2/';">Explore Open-Source Projects</button>
+                <button class="button-design-2 hover">More</button>   
+            </div>
             <!-- <div class="circles"></div> -->
         </div>
 
-        <div class="code-img"></div>
+        <div class="code-img">
+            <div class="code-css-img"></div>
+            <div class="code-menu-img"></div>
+        </div>
     </header>
 
+    <script src="/static/script/header-menu.js"></script>
 </body> 
 </html>
