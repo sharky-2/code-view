@@ -10,12 +10,14 @@ body {
 }
 
 .title-design-1 {
+    color: var(--black);
     font-family: var(--title-font);
     font-size: 100px;
     margin-bottom: 0;
     margin-top: 0;
 }
 .title-design-2 {
+    color: var(--black);
     font-family: var(--title-font);
     font-size: 30px;
     margin-bottom: 0;
@@ -23,6 +25,7 @@ body {
     width: 600px;
 }
 .under-title-design {
+    color: var(--black);
     font-family: var(--under-title-font);
     font-size: 25px;
     opacity: .5;
@@ -31,15 +34,18 @@ body {
     line-height: 25px;
 }
 .text-design-1 {
+    color: var(--black);
     font-family: var(--text-font);
     font-size: 25px;
 }
 .text-design-2 {
+    color: var(--black);
     font-family: var(--text-font);
     font-size: 15px;
     width: 700px;
 }
 .code-text-design {
+    color: var(--black);
     font-family: var(--under-title-font);
     font-size: 12px;
     font-weight: bold;

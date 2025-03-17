@@ -6,9 +6,10 @@
     justify-content: center;
     align-items: center;
 
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 0;
+    z-index: 1000;
 }
 .header-frame button {
     background: none;
@@ -25,6 +26,7 @@
     font-size: 20px;
 
     color: var(--black);
+    cursor: pointer;
 }
 .header-frame button:first-child {
     border-radius: 100px 0 0 100px;
