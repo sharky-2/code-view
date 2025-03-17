@@ -4,57 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="x-icon" href="../static/Img/Logos/BlackIcon_Logo.png">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Design.css') }}">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Links -->
+    <link rel="icon" type="x-icon" href="../static/Img/Logos/black-logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/root.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Animation.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Open.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Mobile.css') }}">
-
-    <link rel="stylesheet" href="../static/css/Design.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/Animation.css">
-    <link rel="stylesheet" href="../static/css/Open.css">
-
-    <link rel="stylesheet" href="../static/css/Mobile.css">
-
-    <title>Stellar AI</title>
+    <title>Stellar</title>
 </head>
 <body>
-<form method="post" action="/">
-    
-    <!-- ------------------------------------------------------------------ -->
-    <!-- Header/Top -->
-    <section class="First">
-        <!--  -->
 
-        <!-- Menu -->
-        <header class="OpenAnimation_Header">
-            <img src="../static/Img/Logos/WhiteText_Logo.png">
-            <a href="/Test" class="ButtonDesign ButtonHoverDesign HeaderAnim_1"><input type="button" value="Test" class="InputButtonDesign"></a>
-            <a href="#" class="ButtonDesign ButtonHoverDesign HeaderAnim_2"><input type="button" value="Learn" class="InputButtonDesign"></a>
-            <a href="/Create-Page" class="ButtonDesign ButtonHoverDesign HeaderAnim_3"><input type="button" value="Create Page" class="InputButtonDesign"></a>
-            <a href="#" class="ButtonDesign ButtonHoverDesign HeaderAnim_4"><input type="button" value="Sign In" class="InputButtonDesign"></a>
-        </header>
+    <header>
+        <div class="menu-frame"></div>
+        <div class="text-frame">
+            <h1 class="title-design">Stellar</h1>
+            <label class="under-title-design">Learn diffrent programming lenguages with stellar.</label>
 
-        <!-- Text -->
-        <div class="TextFrames">
-            <h1 class="TitleText TitleMainAnim"> 
-                <a id="headerTitle" onclick="cylceTypingEffect()">EASILY CREATE PAGE</a>
-                <br><c style="text-shadow: none;">with</c> STELLAR AI</h1>
-            <label class="UnderTitleText TextMainAnim">Sign in to unlock exclusive content and gain deeper insights. Join our journey among the stars as we explore infinity and discover the wonders of the universe</label>
-            <a href="#" class="ButtonDesign ButtonHoverDesign ButtonMainAnim"><input type="button" value="Learn more" class="InputButtonDesign"></a>
+            <!-- <div class="circles"></div> -->
         </div>
 
-        <!-- Planet Shadow -->
-        <div class="PlanetShadow PlanetMainAnim"></div>
+        <div class="code-img"></div>
+    </header>
 
-    </section>
-    
-
-    <script src="{{ url_for('static', filename='script/TypingEffect.js') }}"></script>
-
-</form>
 </body> 
 </html>

@@ -7,9 +7,6 @@ app = Flask(__name__)
 @app.route("/")
 def MainPage(): return render_template("index.html")
 
-@app.route("/Create-Page")
-def Create_Page(): return render_template("CreatePage.html")
-
 @app.route("/Test") 
 def Test(): 
     module = ""

@@ -1,217 +1,111 @@
-html {scroll-behavior: smooth; overflow-x: hidden;}
-body {
-    background-color: var(--MainColor);
-    color: var(--TextColor);
-
-    min-height: 100vh;
-    width: 1200px;
-    padding: 0;
-    margin: auto;
-
-    font-family: var(--NormalType);
-}
-
-section {
-    background: none;
+/* Header */
+header {
     height: 100vh;
     width: 100%;
-    position: relative;    
-}
 
-.BackToTop {
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+header .menu-frame {
+    height: 80px;
     width: 100%;
-    position: fixed;
-    bottom: 0;
+
+    position: absolute;
+    top: 0;
     left: 0;
-    z-index: 100;
-
-    display: flex;
-    justify-content: center;
-    align-items: end;
 }
-
-/* ------------------------------------------------------------------ */
-/* First */
-.First header {
-    height: 120px;
+header .text-frame {
+    height: 550px;
     width: 100%;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-.First header img {width: 200px; margin-right: auto;}
-.First header:hover a input:not(:hover) {opacity: 0.5;}
-
-.PlanetShadow {
-    background-color: var(--MainColor);
-    opacity: 0.4;
-    box-shadow: 25px -50px 40px var(--TextColor);
-    position: absolute;
-
-    height: 1100px;
-    width: 1100px;
-
-    border-radius: 100%;
-    top: 68%;
-    left: 5%;
-}
-
-/* ------------------------------------------------------------------ */
-/* Second */
-.Second {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.TextFrames {
-    background: none;
-    height: 30%;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-}
-
-.CardFrames {
-    color:  black;
-    height: 500px;
-    width: 100%;
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 
     position: relative;
 }
-
-@media (min-width: 500px) {
-    .CardFrames .Card {
-        background-color: var(--TextColor);
-        height: 80%;
-        width: 30%;
-        padding: 10px;
-        border-radius: 20px;
-        transition: all 0.3s ease-in-out;
-        margin: 10px;
-
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        flex-direction: column;
-    }
-
-    .CardFrames:hover .Card:not(:hover) {
-        opacity: 0.5;
-        width: 15%;
-    }
-
-    .CardFrames .Card:hover {
-        z-index: 10;
-        width: 120%;
-        font-size: 100%;
-    }
-    .CardFrames .Card lable {transition: all 0.3s;}
-    .CardFrames .Card:hover lable {
-        font-size: 100%;
-    }
-    .CardFrames .Card h1 {
-        width: auto;
-        transition: all 0.3s;
-    }
-    .CardFrames .Card:hover h1 {
-        transform: rotate(0deg);
-    }
-
-    .CardFrames:not(:hover) .Card:nth-child(4) {
-        width: calc((var(--count) / 2) * 50%);
-        font-size: 100%;
-    }
-
-    .CardFrames .Card h1 {
-        transform: rotate(-90deg);
-    }
-    .CardFrames .Card lable {
-        font-size: 0px;
-    }
-    .CardTextLable {
-        text-align: left;
-    }
+header h1 {
+    position: relative; 
+    width: 450px;  
+    animation: typingtext steps(8) 1s infinite alternate-reverse;
+    overflow: hidden;
 }
+header h1::before {
+    content: "";
+    background-color: var(--black);
+    height: 100%;
+    width: 9px;
 
-
-/* ------------------------------------------------------------------ */
-/* Fourth */
-.Fourth {
-    position: relative;
-}
-.Fourth .Bubble {
-    background-color: var(--TextColor);
-    height: 300px;
-    width: 300px;
-    border-radius: 100%;
     position: absolute;
-
+    right: 0px;
+    bottom: 0;
+    opacity: 1;
+    animation: typingdot steps(1) .5s infinite alternate;
 }
-
-.TextCard {
-    height: auto;
-    padding: 10px;
-    display: flex;
-
-    margin: 20px 0;
+@keyframes typingdot { 50% {opacity: 0;} }
+@keyframes typingtext {
+    from {
+        width: 0px;
+    } to {
+        width: 500px;
+    }
 }
-.TextCard img {
-    width: 200px;
-    object-fit:contain;
-}
-
-.ThreeCardFrame {
-    height: 400px;
+header .circles {
+    background: url("/static/Img/Img/Circles.png") no-repeat center;
+    position: absolute;
+    height: 100%;
     width: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 0;
+    bottom: 0;
 }
-.ThreeCardFrame .Card {
-    background-color: var(--TextColor);
-    color: var(--MainColor);
-    height: 90%;
-    width: 33%;
-    margin: 0 10px;
-    padding: 10px;
-    border-radius: 20px;
+header .code-img {
+    background: url("/static/Img/Img/code.png") no-repeat bottom;
+    background-size: contain;
+    height: 790px;
+    width: 200%;
 
-    transition: all 0.3s;
+    position: absolute;
+    left: -50%;
+    bottom: -20%;
+    z-index: -1;
+    opacity: .8;
 
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-
+    transform: rotate3d(2, 3, -1, 30deg);
 }
-.ThreeCardFrame img {
+header .code-img::before {
+    content: "";
+    background: linear-gradient(
+        90deg,
+        rgba(245, 247, 250, 1),
+        rgba(245, 247, 250, 0),
+        rgba(245, 247, 250, 0),
+        rgba(245, 247, 250, 0),
+        rgba(245, 247, 250, 0),
+        rgba(245, 247, 250, 1)
+    );
+    height: 100%;
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: -10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
-.ThreeCardFrame input {
-    background: none;
-    border: none;
-
+header .code-img::after {
+    content: "";
+    background: linear-gradient(
+        200deg,
+        rgba(245, 247, 250, 1),
+        rgba(245, 247, 250, 0),
+        rgb(245, 247, 250, 1)
+    );
+    height: 100%;
     width: 100%;
-    font-size: var(--MainColor);
-    cursor: pointer;
-}
-.ThreeCardFrame:hover .Card:not(:hover) {
-    opacity: 0.5;
-}
-.ThreeCardFrame .Card:hover {
-    transform: translateY(-20px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
