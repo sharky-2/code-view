@@ -170,18 +170,6 @@ section::before {
     border-right: 1px solid rgba(10, 10, 10);
     z-index: -2;
 }
-section::after {
-    content: "";
-    /* background: url("/static/Img/Img/lines-black.png"); */
-    width: 30px;
-    height: 100%;
-    position: absolute;
-    right: -30px;
-    bottom: 0;
-    opacity: .5;
-
-    z-index: -2;
-}
 section > div::before {
     content: "";
     position: absolute;
@@ -196,4 +184,19 @@ section > div::before {
     height: 1px;
     bottom: 0;
     left: -50%;
+}
+section .img-galery {
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Limit to 3 columns */
+}
+section .img-galery img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+
+    margin: 10px;
 }

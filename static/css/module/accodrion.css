@@ -1,21 +1,24 @@
 #accordion-list {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
 
-    margin-right: 10px;
-    gap: 10px;
 }
 #accordion-list .item {
-    background-color: var(--black);
-    color: var(--white);
+    background: none;
+    color: var(--black);
     padding: 20px;
-    width: 280px;
+    width: 100%;
     
     cursor: pointer;
-
     transition: all .3s;
+
+    border-bottom: 1px solid rgb(10, 10, 10,.2);
+}
+#accordion-list .item:last-of-type {
+    border: none;
 }
 #accordion-list .item .question {
     display: flex;
