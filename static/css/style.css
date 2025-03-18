@@ -145,7 +145,7 @@ header .code-menu-img {
 }
 
 /* Section */
-section > div {
+section > div, footer > div {
     width: 100%;
     min-height: 40px;
     height: fit-content;
@@ -156,7 +156,7 @@ section > div {
 
     padding: 5px 10px;
 }
-section::before {
+section::before, footer::before {
     content: "";
     background: url("/static/Img/Img/lines-black.png");
     width: 30px;
@@ -170,7 +170,7 @@ section::before {
     border-right: 1px solid rgba(10, 10, 10);
     z-index: -2;
 }
-section > div::before {
+section > div::before, footer > div::before {
     content: "";
     position: absolute;
     background: linear-gradient(
@@ -191,7 +191,9 @@ section .img-galery {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Limit to 3 columns */
+    grid-template-columns: auto auto auto;
+    justify-content: start;
+    align-items: center;
 }
 section .img-galery img {
     object-fit: cover;
@@ -200,7 +202,7 @@ section .img-galery img {
 
     margin: 10px;
 }
-section .lenguages-frame {
+section .cards-frame {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: start;
@@ -209,7 +211,7 @@ section .lenguages-frame {
     margin: 0;
 
 }
-section .lenguages-frame .lenguage {
+section .cards-frame .card {
     height: 430px;
     width: 300px;
     margin: 10px;
@@ -218,7 +220,7 @@ section .lenguages-frame .lenguage {
 
     cursor: pointer;
 }
-section .lenguages-frame .lenguage img {
+section .cards-frame .card img {
     object-fit: cover;
     height: 68%;
     width: 100%;
