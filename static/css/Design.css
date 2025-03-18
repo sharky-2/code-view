@@ -51,11 +51,24 @@ body {
     font-weight: bold;
     opacity: .5;
 }
+.code-text-design-2 {
+    color: var(--black);
+    font-family: var(--under-title-font);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
 .side-text {
     font-size: 15px;
     font-family: var(--under-title-font);
     margin-left: 10px;
 }
+/* Text colors */
+.blue-color {color: var(--dark-blue);}
+.pink-color {color: var(--pink);}
+
+/* Rank colors */
 .rank-easy {color: green}
 .rank-medium {color: orange}
 .rank-hard {color: red}
@@ -130,4 +143,16 @@ section, footer {
 }
 footer {
     margin-top: 100px;
+}
+
+.side-frame-text {
+    position: absolute;
+    right: 94%;
+    bottom: 100px;
+    transform: rotate(-90deg);
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 200px;
 }
