@@ -200,3 +200,26 @@ section .img-galery img {
 
     margin: 10px;
 }
+section .lenguages-frame {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+}
+section .lenguages-frame .lenguage {
+    height: 430px;
+    width: 300px;
+    margin: 10px;
+    position: relative;
+    transition: all .3s;
+
+    cursor: pointer;
+}
+section .lenguages-frame .lenguage img {
+    object-fit: cover;
+    height: 68%;
+    width: 100%;
+}

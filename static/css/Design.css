@@ -51,6 +51,14 @@ body {
     font-weight: bold;
     opacity: .5;
 }
+.side-text {
+    font-size: 15px;
+    font-family: var(--under-title-font);
+    margin-left: 10px;
+}
+.rank-easy {color: green}
+.rank-medium {color: orange}
+.rank-hard {color: red}
 
 .button-design-1 {
     background: none;
