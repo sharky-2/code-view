@@ -32,11 +32,11 @@ def ImageModule(**context):
 
     module = f"""
     <!-- Img Module -->
-    <section>
+    <section class="Image-module">
         <div></div>
         <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
         <div><h1 class="title-design-2">{title}</h1></div>
-        <div><img src="{img}" width="100%"></div>
+        <div class="image-frame"><img src="{img}"></div>
     </section>
     """
     return module

@@ -74,7 +74,7 @@ header .code-img {
     width: 200%;
 
     position: absolute;
-    left: -30%;
+    left: -35%;
     bottom: -100%;
     z-index: -1;
     opacity: .8;
@@ -167,7 +167,7 @@ section::before, footer::before {
     width: 30px;
     height: 100%;
     position: absolute;
-    left: -30px;
+    left: -32px;
     bottom: 0;
     opacity: .5;
     
@@ -196,7 +196,7 @@ section .img-galery {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-content: start;
     align-items: center;
 }
@@ -209,7 +209,7 @@ section .img-galery img {
 }
 section .cards-frame {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-content: start;
     align-items: center;
     padding: 0;
@@ -240,4 +240,27 @@ section .cards-frame .card img {
     object-fit: cover;
     height: 50px;
     width: 50px;
+}
+
+.test {
+    background-color: white;
+    height: 97%;
+    width: 200%;
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+}
+
+.Image-module .image-frame {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}
+.Image-module .image-frame img {
+    object-fit: cover;
+    height: 90%;
+    width: 100%;
+    border-radius: 20px;
 }

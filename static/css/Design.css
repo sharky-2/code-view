@@ -1,6 +1,6 @@
 body {
     background-color: var(--white);
-    width: 1000px;
+    width: 1300px;
     height: auto;
 
     padding: 0;
@@ -147,7 +147,7 @@ footer {
 
 .side-frame-text {
     position: absolute;
-    right: 94%;
+    right: 95.4%;
     bottom: 100px;
     transform: rotate(-90deg);
 
