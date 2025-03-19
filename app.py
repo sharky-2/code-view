@@ -15,21 +15,24 @@ def Test():
     with open("data/content.json") as f:
         data = json.load(f)
 
-    for char in data.get(name_, []): 
-        type_ = char.get("type", None)
-        title = char.get("title", None)
-        text = char.get("text", None)
-        img = char.get("img", None)
-        button = char.get("button", None)
+    for char in data.get(name_, []):
+        context = {
+            "title": char.get("title"),
+            "text": char.get("text"),
+            "img": char.get("img"),
+            "button": char.get("button"),
 
-        accordion_amount = char.get("accordion_amount", None)
-        image_amount = char.get("image_amount", None)
-        blog_amount = char.get("blog_amount", None)
-        card_amount = char.get("card_amount", None)
-        
-        module_function = getattr(data_utils, type_, None)
-        if module_function: 
-            module += module_function(title, text, img, button, accordion_amount, image_amount, blog_amount, card_amount, name_)
+            "accordion_amount": char.get("accordion_amount"),
+            "image_amount": char.get("image_amount"),
+            "blog_amount": char.get("blog_amount"),
+            "card_amount": char.get("card_amount"),
+
+            "page_name": name_
+        }
+
+        module_function = getattr(data_utils, char.get("type"), None)
+        if module_function:
+            module += module_function(**context)
 
     return render_template("test.html", modules = module)
 

@@ -1,11 +1,17 @@
 import json
 
-def design(title, text, img, button, accordion_amount, image_amount, blog_amount, card_amount, page_name):
+def design(**context):
+    title = context.get("title")
+    text = context.get("text")
+
     module = f"""
     """
     return module
 
-def TextModule(title, text, img, button, accordion_amount, image_amount, blog_amount, card_amount, page_name):
+def TextModule(**context):
+    title = context.get("title")
+    text = context.get("text")
+
     module = f"""
     <section>
         <div></div>
@@ -20,7 +26,10 @@ def TextModule(title, text, img, button, accordion_amount, image_amount, blog_am
     """
     return module
 
-def ImageModule(title, text, img, button, accordion_amount, image_amount, blog_amount, card_amount, page_name):
+def ImageModule(**context):
+    title = context.get("title")
+    img = context.get("img")
+
     module = f"""
     <!-- Img Module -->
     <section>
@@ -32,7 +41,10 @@ def ImageModule(title, text, img, button, accordion_amount, image_amount, blog_a
     """
     return module
 
-def AccordionModule(title, text, img, button, accordion_amount, image_amount, blog_amount, card_amount, page_name):
+def AccordionModule(**context):
+    accordion_amount = context.get("accordion_amount")
+    page_name = context.get("page_name")
+
     item = ""
     for i in range(accordion_amount):
 
@@ -69,7 +81,10 @@ def AccordionModule(title, text, img, button, accordion_amount, image_amount, bl
     """
     return module
 
-def ImageGalreyModule(title, text, img, button, accordion_amount, image_amount, blog_amount, card_amount, page_name):
+def ImageGalreyModule(**context):
+    image_amount = context.get("image_amount")
+    page_name = context.get("page_name")
+
     item = ""
     for i in range(image_amount):
 
@@ -94,7 +109,10 @@ def ImageGalreyModule(title, text, img, button, accordion_amount, image_amount, 
     """
     return module
 
-def BlogModule(title, text, img, button, accordion_amount, image_amount, blog_amount, card_amount, page_name):
+def BlogModule(**context):
+    blog_amount = context.get("blog_amount")
+    page_name = context.get("page_name")
+
     item = ""
     for i in range(blog_amount):
 
@@ -108,11 +126,11 @@ def BlogModule(title, text, img, button, accordion_amount, image_amount, blog_am
                 title = char.get(f"title-{i}", None)
                 text = char.get(f"text-{i}", None)
                 item += f"""
+                {'<div></div>' if i > 0 else ''}
+                <div><label class="code-text-design">text-4x2 tracking-tighter text-balance</label></div>
                 <div><h1 class="title-design-2">{title}</h1></div>
                 <div><label class="code-text-design">text-base text-white</label></div>
                 <div><label class="text-design-2">{text}</label></div>
-                
-                <div></div>
                 """
 
     module = f"""
@@ -122,7 +140,12 @@ def BlogModule(title, text, img, button, accordion_amount, image_amount, blog_am
     """
     return module
 
-def CardModule(title, text, img, button, accordion_amount, image_amount, blog_amount, card_amount, page_name):
+def CardModule(**context):
+    title = context.get("title")
+    text = context.get("text")
+    card_amount = context.get("card_amount")
+    page_name = context.get("page_name")
+
     item = ""
     for i in range(card_amount):
 

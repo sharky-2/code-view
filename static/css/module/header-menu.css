@@ -54,9 +54,8 @@
     padding: 0 100px;
 }
 .header-frame:hover a:not(:hover) button {
-    opacity: .5;
+    opacity: 0;
     padding: 0 5px;
-    color: white;
 }
 
 /* ----------------------------------------------------- */
