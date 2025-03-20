@@ -3,15 +3,26 @@
   "_comment2": "Test page",
   "test-page": [
     {
+      "type": "HeaderModule",
+      "title": "Programming Lenguages",
+      "text": "Stellar equips you with all the resources to master full-stack development. From guided lessons to real-world projects, we help you grow into a skilled, confident developer.",
+      "button": "Get started"
+    },
+    {
       "type": "TextModule",
+      "title": "Introduction to Python",
+      "text": "Python is a versatile programming language used in many fields like web development, data science, automation, and more."
+    },
+    {
+      "type": "Text_Button_Module",
       "title": "Introduction to Python",
       "text": "Python is a versatile programming language used in many fields like web development, data science, automation, and more.",
       "button": "Learn More"
     },
     {
       "type": "ImageModule",
-      "title": "Introduction to Python",
-      "img": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg"
+      "text": "Python is a versatile programming language used in many fields like web development, data science, automation, and more.",
+      "img": "/static/img/img/image.png"
     },
     {
       "type": "AccordionModule",
@@ -30,15 +41,16 @@
     {
       "type": "ImageGalreyModule",
       "title": "Image Galrey Module",
-      "img-0": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg",
-      "img-1": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg",
-      "img-2": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg",
-      "img-3": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg",
-      "img-4": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg",
-      "img-5": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg",
-      "img-6": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg",
-      "img-7": "https://kinsta.com/wp-content/uploads/2019/05/edit-wordpress-code-image.jpg",
-      "image_amount": 8
+      "img-0": "https://cdn.britannica.com/56/131956-050-047AC714/HTML-hypertext-markup-language-material-Web-browsers.jpg",
+      "img-1": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1652875211148%2F2q6jib80R.png",
+      "img-2": "https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/nord_cascadia-code.png",
+      "img-3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyXULcqI9KJkPjnJHWT9Wtl6igSv7IKNY_BNtI1o5v4ZfWqlWWlGNckqVlfh13ZP2QV24&usqp=CAU",
+      "img-4": "https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/nord_cascadia-code.png",
+      "img-5": "https://cdn.britannica.com/56/131956-050-047AC714/HTML-hypertext-markup-language-material-Web-browsers.jpg",
+      "img-6": "https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/nord_cascadia-code.png",
+      "img-7": "https://raw.githubusercontent.com/kufii/CodeSnap/master/examples/nord_cascadia-code.png",
+      "img-8": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1652875211148%2F2q6jib80R.png",
+      "image_amount": 9
     },
     {
       "type": "BlogModule",

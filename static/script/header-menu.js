@@ -1,4 +1,4 @@
-const buttons = Array.from(document.getElementById("header-frame").getElementsByTagName("button"));
+const buttons = Array.from(document.getElementById("header-frame").getElementsByTagName("a"));
 buttons.forEach(button => {
     button.addEventListener("mouseover", () => {
         const hoveredOrder = parseInt(window.getComputedStyle(button).order, 10);

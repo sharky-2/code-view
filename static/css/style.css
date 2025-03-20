@@ -1,13 +1,12 @@
 /* Header */
 header {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-
 }
 header .text-frame {
     height: 0px;
@@ -22,6 +21,7 @@ header .text-frame {
 
     gap: 10px;
     overflow: hidden;
+
 }
 header .text-frame img {width: 50px;}
 header .text-frame .button-frame {
@@ -148,32 +148,31 @@ header .code-menu-img {
 /* Section */
 section > div, footer > div {
     width: 100%;
-    min-height: 20px;
+    min-height: 40px;
     height: fit-content;
     position: relative;
 
     display: flex;
     align-items: end;
 
-    padding: 5px 10px;
+    padding: 0;
+    /* padding: 5px 10px; */
 }
+
 section > div:empty,
 footer > div:empty {
-    min-height: 50px;
+    min-height: 150px;
 }
-section div:has(button) {
-    height: 100%;
-    padding: 0;
-}
+
 section::before, footer::before {
     content: "";
     background: url("/static/Img/Img/lines-black.png");
     width: 30px;
     height: 100%;
     position: absolute;
-    left: -32px;
+    left: -38px;
     bottom: 0;
-    opacity: .5;
+    opacity: .1;
     
     border-left: 1px solid rgba(10, 10, 10);
     border-right: 1px solid rgba(10, 10, 10);
@@ -185,8 +184,8 @@ section > div::before, footer > div::before {
     background: linear-gradient(
         90deg,
         rgba(10, 10, 10,0),
-        rgba(10, 10, 10,.2),
-        rgba(10, 10, 10,.2),
+        rgba(10, 10, 10,.1),
+        rgba(10, 10, 10,.1),
         rgba(10, 10, 10,0)
     );
     width: 200%;
@@ -197,19 +196,17 @@ section > div::before, footer > div::before {
 section .img-galery {
     width: 100%;
     height: fit-content;
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: start;
+    grid-template-columns: auto auto  auto;
+    justify-content: center;
     align-items: center;
 }
 section .img-galery img {
-    object-fit: cover;
+    box-shadow: 0 0 10px var(--gray);
     width: 300px;
-    height: 300px;
-    margin: 10px;
-    box-shadow: 0 0 10px 0 var(--gray);
+    margin: 20px;
 }
 section .cards-frame {
     display: grid;
@@ -241,6 +238,7 @@ section .cards-frame .card img {
     justify-content: start;
     align-items: center;
     gap: 10px;
+    height: 60px;
 }
 .img-footer img {
     object-fit: cover;
@@ -257,9 +255,29 @@ section .cards-frame .card img {
     bottom: 0;
 }
 
-.image-frame img {
-    object-fit: cover;
-    height: 90%;
+.image-frame {
+    /* background-color: var(--gray); */
+    margin-left: 0px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+.image-frame::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* background: url("/static/Img/Img/lines-black.png"); */
+    height: 100%;
     width: 100%;
+    opacity: .2;
+    z-index: -1;
+}
+.image-frame img {
+    box-shadow: 0 0 10px 0 var(--gray);
     border-radius: 20px;
+    width: 100%;
+
+    margin: 10px;
 }

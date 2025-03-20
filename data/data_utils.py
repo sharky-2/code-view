@@ -8,17 +8,60 @@ def design(**context):
     """
     return module
 
+def HeaderModule(**context):
+    title = context.get("title")
+    text = context.get("text")
+    button = context.get("button")
+
+    module = f"""
+    <section style="margin-top: 80px;">
+        <div class="header-frame" id="header-frame" >
+            <a href="/" id="header-button-1" style="order: 1;">Home</a>
+            <a href="/Test" id="header-button-1" style="order: 2;">Programming Lenguages</a>
+            <a href="/" id="header-button-1" style="order: 3;">About</a>
+        </div>
+
+        <div style="height: 90px;"><label class="code-text-design">text-lg text-gray-950 font-medium</label></div>
+        <div><h1 class="title-design-1">{title}</h1></div>
+        <div><label class="code-text-design">text-base text-white</label></div>
+        <div><label class="text-design-2">{text}</label></div>
+        <div><button class="button-design-2 hover-normal">{button}</button></div>
+    
+        <code class="side-frame-text pink-color code-text-design-2">header</code>
+    </section> 
+    """
+    return module
+
 def TextModule(**context):
     title = context.get("title")
     text = context.get("text")
 
     module = f"""
     <section>
+        <div></div>
         <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
         <div><h1 class="title-design-2">{title}</h1></div>
         <div><label class="code-text-design">text-base text-white</label></div>
         <div><label class="text-design-2">{text}</label></div>
-        <div><button class="button-design-2 hover-glitchy">Discover Stellar Plus</button></div>
+    
+        <code class="side-frame-text blue-color code-text-design-2">introduction</code>
+    </section> 
+    """
+    return module
+
+def Text_Button_Module(**context):
+    title = context.get("title")
+    text = context.get("text")
+    button = context.get("button")
+
+    module = f"""
+    <section>
+        <div></div>
+        <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
+        <div><h1 class="title-design-2">{title}</h1></div>
+        <div><label class="code-text-design">text-base text-white</label></div>
+        <div><label class="text-design-2">{text}</label></div>
+        <div><button class="button-design-2 hover-normal">{button}</button></div>
     
         <code class="side-frame-text blue-color code-text-design-2">introduction</code>
     </section> 
@@ -26,15 +69,17 @@ def TextModule(**context):
     return module
 
 def ImageModule(**context):
-    title = context.get("title")
     img = context.get("img")
+    text = context.get("text")
+    button = context.get("button")
 
     module = f"""
     <!-- Img Module -->
-    <section>
+    <section class="image-module">
         <div></div>
-        <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
-        <div><h1 class="title-design-2">{title}</h1></div>
+        <div><label class="code-text-design">text-base text-white</label></div>
+        <div><label class="text-design-2">{text}</label></div>
+        <div><label class="code-text-design">img-size img-2x7 background-gray</label></div>
         <div class="image-frame"><img src="{img}"></div>
     </section>
     """
@@ -100,7 +145,6 @@ def ImageGalreyModule(**context):
     module = f"""
     <section>
         <div></div>
-        <div><label class="code-text-design">img-4xl img-sze img-center</label></div>
         <div class="img-galery image-frame">
             {item}
         </div>
@@ -125,15 +169,15 @@ def BlogModule(**context):
                 title = char.get(f"title-{i}", None)
                 text = char.get(f"text-{i}", None)
                 item += f"""
-                {'<div></div>' if i > 0 else ''}
-                <div><label class="code-text-design">text-4x2 tracking-tighter text-balance</label></div>
+                <div style="height: 60px;"><label class="code-text-design">text-4x2 tracking-tighter text-balance</label></div>
                 <div><h1 class="title-design-2">{title}</h1></div>
                 <div><label class="code-text-design">text-base text-white</label></div>
                 <div><label class="text-design-2">{text}</label></div>
                 """
 
     module = f"""
-    <section style="margin-top: 100px; margin-bottom: 100px;">
+    <section>
+        <div></div>
         {item}
     </section>
     """
@@ -169,7 +213,8 @@ def CardModule(**context):
                 """
 
     module = f"""
-    <section style="margin-top: 100px; margin-bottom: 100px;">
+    <section>
+        <div></div>
         <div><label class="code-text-design">text-4x2 tracking-tighter text-balance</label></div>
         <div><h1 class="title-design-2">{title}</h1></div>
         <div><label class="code-text-design">text-base text-white text-size text-5x1</label></div>
