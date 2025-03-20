@@ -83,12 +83,13 @@ body {
     width: fit-content;
 
     outline: none;
-    border: 1px solid;
+    border: 1px solid rgba(10, 10, 10);
     border-radius: 100px;
 }
 .button-design-2 {
     background-color: var(--black);
     color: var(--white);
+    height: 100%;
 
     font-family: var(--text-font);
     font-size: 20px;
@@ -100,23 +101,19 @@ body {
     border-radius: 100px;
 }
 
-.hover-glitchy {
+.hover-glitchy,
+.hover-normal,
+.hover-expend {
     transition: all 0.3s ease;
     cursor: pointer;
 }
-
 .hover-glitchy:hover {
     transform: scale(1.1);
     animation: glitch .3s ease forwards;
 }
-.hover-normal {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
 .hover-normal:hover {
     transform: scale(1.1);
 }
-
 @keyframes glitch {
     25% {
         transform: translateX(10px) translateY(2px);

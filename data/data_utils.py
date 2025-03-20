@@ -14,7 +14,6 @@ def TextModule(**context):
 
     module = f"""
     <section>
-        <div></div>
         <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
         <div><h1 class="title-design-2">{title}</h1></div>
         <div><label class="code-text-design">text-base text-white</label></div>
@@ -32,7 +31,7 @@ def ImageModule(**context):
 
     module = f"""
     <!-- Img Module -->
-    <section class="Image-module">
+    <section>
         <div></div>
         <div><label class="code-text-design">text-4xl text-white tracking-tighter text-balance</label></div>
         <div><h1 class="title-design-2">{title}</h1></div>
@@ -102,7 +101,7 @@ def ImageGalreyModule(**context):
     <section>
         <div></div>
         <div><label class="code-text-design">img-4xl img-sze img-center</label></div>
-        <div class="img-galery">
+        <div class="img-galery image-frame">
             {item}
         </div>
     </section>
