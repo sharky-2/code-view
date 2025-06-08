@@ -1,8 +1,8 @@
 import './../assets/style/style.css'
 
-export function icon_button({text, icon}) {
+export function icon_button({text, icon, onClick}) {
   return (
-    <button className='icon-button'>
+    <button className='icon-button'  onClick={onClick}>
       <img src={icon} />
       {text}
     </button>

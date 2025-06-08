@@ -48,9 +48,11 @@ header {
 
             z-index: 1;
             position: absolute;
-            left: 3px;
+            left: 2.5%;
             top: 50%;
-            transform: translate(0, -50%);
+            transform: translate(0%, -50%);
+
+            transition: all .3s;
         }
     }
 }
