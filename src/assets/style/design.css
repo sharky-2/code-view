@@ -1,0 +1,61 @@
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 20px;
+    margin: 0;
+
+    width: calc(100% - 40px);
+
+    font-family: var(--font-secondary);
+
+    /* ============================================= */
+    /* ===== titles ===== */
+    h1 {margin: 0;}
+
+    /* ============================================= */
+    /* ===== buttons ===== */
+    .icon-button {
+        background: none;
+        border: none;
+        color: var(--color-white);
+        width: 70px;
+
+        padding: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        z-index: 2;
+        /* ===== icon ===== */
+        img {width: 15px;}
+
+        /* ===== elements ===== */
+    }
+
+    .blue-button {
+        background: linear-gradient(
+            180deg,
+            var(--color-blue),
+            var(--color-blue-dark)
+        );
+        border: none;
+        color: var(--color-white);
+        padding: 5px 20px 5px 20px;
+        height: calc(100% + 6px);
+
+        border-radius: 8px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        z-index: 2;
+        /* ===== icon ===== */
+        img {width: 15px;}
+
+        /* ===== elements ===== */
+    }
+}

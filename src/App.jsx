@@ -1,12 +1,10 @@
 import React from 'react';
-import {Button} from './components/buttons';
-
+import {Header} from './components/header';
 
 function App() {
   return (
     <div>
-      <h1>IoT Desktop App</h1>
-      <Button />
+      <Header />
     </div>
   );
 }

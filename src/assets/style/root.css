@@ -1,0 +1,14 @@
+@import url("./../fonts/fonts.css");
+
+:root {
+  /* Colors */
+  --color-white: #ececec;
+  --color-black: #100c0c;      
+  --color-gray-dark: #272727; 
+  --color-blue: #3a7bd5;     
+  --color-blue-dark: #2a5ca9; 
+
+  /* Fonts */
+  --font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-secondary: 'Roboto';
+}

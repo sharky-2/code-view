@@ -1,7 +1,19 @@
 import './../assets/style/style.css'
 
-export function Button() {
+export function icon_button({text, icon}) {
   return (
-    <button>Button</button>
+    <button className='icon-button'>
+      <img src={icon} />
+      {text}
+    </button>
   );
+}
+
+export function blue_button({text, icon}) {
+  return (
+    <button className='blue-button'>
+      <img src={icon} />
+      {text}
+    </button>
+  )
 }
