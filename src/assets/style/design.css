@@ -8,12 +8,17 @@ body {
 
     font-family: var(--font-secondary);
 
+    .body {
+        height: calc(100vh - 90px);
+    }
+
     /* ============================================= */
     /* ===== titles ===== */
     h1 {margin: 0;}
 
     /* ============================================= */
     /* ===== buttons ===== */
+    button {cursor: pointer;}
     .icon-button {
         background: none;
         border: none;
@@ -48,11 +53,33 @@ body {
         border-radius: 8px;
 
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         gap: 5px;
 
         z-index: 2;
+        /* ===== icon ===== */
+        img {width: 15px;}
+
+        /* ===== elements ===== */
+    }
+
+    /* ============================================= */
+    /* ===== text ===== */
+    .icon-label {
+        background: none;
+        border: none;
+        color: var(--color-white);
+        width: 70px;
+
+        padding: 5px;
+        text-transform: capitalize;
+
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        
         /* ===== icon ===== */
         img {width: 15px;}
 
