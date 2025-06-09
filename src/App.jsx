@@ -7,6 +7,7 @@ const App = () => {
   const [html, setHtml] = useState(`<h1 class="shimmer-text">
   Code-View
 </h1>`);
+
   const [css, setCss] = useState(`/* ===== body ===== */
 body {
   background: #fff;
@@ -42,13 +43,22 @@ body {
   to {background-position: 0% 0;}
 }`);
 
+  const [js, setJs] = useState(`// Write your JavaScript here
+console.log("Hello from JS!");`);
 
   return (
     <div className='body'>
       <Header />
       <section className='code-section'>
-        <Preview html={html} css={css} />
-        <Code html={html} css={css} setHtml={setHtml} setCss={setCss} />
+        <Preview html={html} css={css} js={js} />
+        <Code 
+          html={html} 
+          css={css} 
+          js={js} 
+          setHtml={setHtml} 
+          setCss={setCss} 
+          setJs={setJs} 
+        />
       </section>
     </div>
   );

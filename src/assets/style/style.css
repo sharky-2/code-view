@@ -74,7 +74,7 @@ header {
     .right-section {
         border: 1px solid var(--color-gray-dark);
         border-radius: 10px;
-        width: 30%;
+        width: 40%;
         height: calc(100% - 105px);
 
         .hero {
@@ -94,7 +94,10 @@ header {
     
                 button {
                     background: none;
-                    border: none;
+                    border-left: 1px solid var(--color-black);
+                    border-top: 1px solid var(--color-black);
+                    border-right: 1px solid var(--color-black);
+                    border-bottom: none;
                     border-radius: 5px 5px 0 0;
     
                     height: 35px;
@@ -105,7 +108,8 @@ header {
                 }
     
                 .html-button.active,
-                .css-button.active {
+                .css-button.active,
+                .js-button.active {
                     background: #151414 !important;
                     border-top: 1px solid var(--color-gray-dark) !important;
                     border-left: 1px solid var(--color-gray-dark) !important;
@@ -165,7 +169,7 @@ header {
 
     /* ===== left ===== */
     .left-section {
-        width: 70%;
+        width: 60% !important;
         border-radius: 10px;
         overflow: hidden;
         height: 100%;
@@ -183,12 +187,12 @@ header {
     .code-section {
         flex-direction: column;
         .right-section {
-            width: 100%;
-            height: 50%;
+            width: 100% !important;
+            height: 50% !important;
         }
         .left-section {
-            width: 100%;
-            height: 50%;
+            width: 100% !important;
+            height: 50% !important;
         }
     }
 }
