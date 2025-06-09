@@ -12,3 +12,16 @@ export function toggle() {
     toggle_button = !toggle_button; 
   }
 }
+
+
+export function toggle_script(value) {
+  const html_button = document.querySelector(".html-button")
+  const css_button = document.querySelector(".css-button")
+  if (value === "html") {
+    html_button.classList.add("active")
+    css_button.classList.remove("active")
+  } else {
+    css_button.classList.add("active")
+    html_button.classList.remove("active")
+  }
+}
