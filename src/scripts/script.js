@@ -13,7 +13,8 @@ export function toggle() {
   }
 }
 
-
+// =============================================
+// ===== Toggle Script =====
 export function toggle_script(value) {
   const html_button = document.querySelector(".html-button")
   const css_button = document.querySelector(".css-button")

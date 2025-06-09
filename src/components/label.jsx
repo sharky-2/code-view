@@ -1,3 +1,5 @@
+// =============================================
+// ===== Css =====
 import './../assets/style/style.css'
 
 export function icon_label({text, icon}) {

@@ -9,7 +9,8 @@ body {
     font-family: var(--font-secondary);
 
     .body {
-        height: calc(100vh - 90px);
+        width: 100%;
+        height: calc(100vh - 100px);
     }
 
     /* ============================================= */
@@ -79,6 +80,7 @@ body {
         justify-content: start;
         align-items: center;
         gap: 5px;
+        margin-bottom: 20px;
         
         /* ===== icon ===== */
         img {width: 15px;}
