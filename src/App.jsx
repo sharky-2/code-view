@@ -7,12 +7,13 @@ const App = () => {
   const [html, setHtml] = useState(`<!-- ===== info ===== 
   Demo version — exciting features coming soon! 
   This is just the beginning — stay tuned for more updates!
-  New features on the way — keep an eye out! 
+  New features on the way — keep an eye out!
 -->
 
-<h1 class="shimmer-text">
-  Code-View
-</h1>`);
+<h1 class="shimmer-text" id="title-btn">
+  click me: <span id="count">0</span>
+</h1>
+`);
 
   const [css, setCss] = useState(`/* ===== body ===== */
 body {
@@ -21,11 +22,12 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 0;
 
   /* ===== text effect ===== */
   .shimmer-text {
-    font-size: 4rem;
+    font-size: 2rem;
     color: #316dec;
     background: linear-gradient(
     90deg,
@@ -38,6 +40,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
 
     animation: shimmerMove 2s linear infinite;
   }
@@ -49,8 +52,17 @@ body {
   to {background-position: 0% 0;}
 }`);
 
-  const [js, setJs] = useState(`// Write your JavaScript here
-console.log("Hello from JS!");`);
+  const [js, setJs] = useState(`let count = 0;
+
+const title = document.getElementById('title-btn');
+const countDisplay = document.getElementById('count');
+
+title.addEventListener('click', () => {
+  count++;
+  countDisplay.textContent = count;
+});
+`);
+
 
   return (
     <div className='body'>
