@@ -7,7 +7,7 @@ const App = () => {
   const [html, setHtml] = useState(`<!-- ===== info ===== 
   Demo version — exciting features coming soon! 
   This is just the beginning — stay tuned for more updates!
-  New features on the way — keep an eye out!
+  New features on the way — keep an eye out! 
 -->
 
 <h1 class="shimmer-text">
