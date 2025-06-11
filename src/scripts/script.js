@@ -1,27 +1,21 @@
 // =============================================
 // ===== Toggle Header =====
 export function toggle(value) {
-  const sections = {
-    header_button: document.querySelector(".selected-button"),
-    buttons: document.querySelector(".button-section"),
-    code_editor: document.querySelector(".code-editor-section"),
-    hero: document.querySelector(".hero"),
-    info: document.querySelector(".info-section"),
-  };
+  const sections = [
+    document.querySelector(".selected-button"),
+    document.querySelector(".button-section"),
+    document.querySelector(".code-editor-section"),
+    document.querySelector(".hero"),
+    document.querySelector(".info-section"),
+  ]
 
-  if (value === "code") {
-    sections.header_button.classList.remove("active")
-    sections.buttons.classList.remove("active")
-    sections.hero.classList.remove("active")
-    sections.code_editor.classList.remove("active")
-    sections.info.classList.remove("active")
-  } else {
-    sections.header_button.classList.add("active")
-    sections.buttons.classList.add("active")
-    sections.hero.classList.add("active")
-    sections.code_editor.classList.add("active")
-    sections.info.classList.add("active")
-  }
+  const method = value === "code" ? "remove" : "add"
+
+  sections.forEach(section => {
+    if (section) {
+      section.classList[method]("active")
+    }
+  })
 }
 
 // =============================================
