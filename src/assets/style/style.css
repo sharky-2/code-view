@@ -190,10 +190,10 @@ header {
 
         .info-section {
             background-color: var(--color-black-light);
-            width: calc(100% - 30px);
+            width: calc(100% - 40px);
             height: 110%;
 
-            padding: 15px;
+            padding: 20px;
             border: 1px solid var(--color-gray-dark);
 
             border-radius: 0 0 10px 10px;
