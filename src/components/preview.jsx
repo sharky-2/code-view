@@ -1,4 +1,8 @@
+// =============================================
+// ===== Function: preview =====
 export function Preview({ html, css, js }) {
+
+  // ===== show preview =====
   const createPreviewDocument = () => `
     <html>
       <head>

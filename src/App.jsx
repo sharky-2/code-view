@@ -1,4 +1,7 @@
+// =============================================
+// ===== Imports =====
 import React, { useState } from 'react';
+
 import { Header } from './components/header';
 import { Preview } from './components/preview';
 import { Code } from './components/code';
@@ -18,6 +21,7 @@ const App = () => {
   const [css, setCss] = useState(`/* ===== body ===== */
 body {
   background: #100c0c;
+  color: white;
   display: flex;
   height: 100vh;
   justify-content: center;

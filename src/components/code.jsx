@@ -1,18 +1,25 @@
+// =============================================
+// ===== Imports =====
 import React, { useState, useRef, useEffect } from 'react';
-import * as labels from './../components/label';
-import * as scripts from './../scripts/script';
 
-import codeIcon from './../assets/icons/code.png';
+import * as labels from './../components/label';
+
 import terminalIcon from './../assets/icons/terminal.png';
 
+import * as scripts from './../scripts/script';
 
+// =============================================
+// ===== Function: code editor =====
 export function Code({ html, css, js, setHtml, setCss, setJs }) {
+
+  // ===== fill textarea =====
   const [activeTab, setActiveTab] = useState('html');
   const [lineCount, setLineCount] = useState(1);
 
   const textareaRef = useRef(null);
   const lineNumbersRef = useRef(null);
 
+  // ===== change between projects =====
   function handleChange(e) {
     const value = e.target.value;
 
@@ -75,15 +82,17 @@ export function Code({ html, css, js, setHtml, setCss, setJs }) {
     }
   }
 
+  // ===== line =====
   const lines = Array.from({ length: lineCount }, (_, i) => i + 1);
   const getCurrentValue = () =>
     (activeTab === 'html' ? html : activeTab === 'css' ? css : js) || '';
 
   return (
     <section className="right-section">
+
+      {/* ===== text section ===== */}
       <div className="hero">
         <labels.icon_label text="Download program" icon={terminalIcon} />
-
         <div className="open-source">gh repo clone sharky-2/code-view</div>
 
         <nav className="button-section">
@@ -113,6 +122,7 @@ export function Code({ html, css, js, setHtml, setCss, setJs }) {
         </nav>
       </div>
 
+      {/* ===== code editor section ===== */}
       <div className="code-editor-section">
         <div ref={lineNumbersRef} className="line-numbers">
           {lines.map((line) => (
@@ -133,6 +143,7 @@ export function Code({ html, css, js, setHtml, setCss, setJs }) {
         />
       </div>
 
+      {/* ===== info section ===== */}
       <div className="info-section">
           <h1>Lorem ipsum</h1>
           <labels>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</labels>

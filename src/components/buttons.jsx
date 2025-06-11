@@ -1,5 +1,9 @@
+// =============================================
+// ===== Imports =====
 import './../assets/style/style.css'
 
+// =============================================
+// ===== Function: icon button =====
 export function icon_button({text, icon, onClick}) {
   return (
     <button className='icon-button'  onClick={onClick}>
@@ -9,6 +13,8 @@ export function icon_button({text, icon, onClick}) {
   );
 }
 
+// =============================================
+// ===== Function: blue button =====
 export function blue_button({text, icon}) {
   return (
     <button className='blue-button'>
