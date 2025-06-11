@@ -56,12 +56,16 @@ header {
 
             transition: all .3s;
         }
+        .selected-button.active {
+            transform: translate(107%, -50%);
+        }
     }
 }
 
 /* ============================================= */
 /* ===== code ===== */
 .code-section {
+    background: none;
     width: 100%;
     height: 100% !important;
 
@@ -79,8 +83,18 @@ header {
 
         .hero {
             width: calc(100% - 40px);
-            height: 100px;
+            height: 187px;
             padding: 20px 20px 0 20px;
+
+            /* ===== source ===== */
+            .open-source {
+                background: var(--color-black-light) !important;
+                border: 1px solid var(--color-gray-dark);
+                border-radius: 10px;
+                padding: 20px 20px;
+                
+                margin: 0 0 20px 0;
+            }
             
             /* ===== button ===== */
             .button-section {
@@ -110,21 +124,26 @@ header {
                 .html-button.active,
                 .css-button.active,
                 .js-button.active {
-                    background: #151414 !important;
+                    background-color: var(--color-black);
                     border-top: 1px solid var(--color-gray-dark) !important;
                     border-left: 1px solid var(--color-gray-dark) !important;
                     border-right: 1px solid var(--color-gray-dark) !important;
                     border-bottom: none !important;
                 }
             }
+            .button-section.active {
+                display: none !important;
+            }
         }
-
+        .hero.active {
+            display: none;
+        }
 
         /* ===== code ===== */
         .code-editor-section {
-            background-color: #151414;
+            background-color: var(--color-black);
             width: 100%;
-            height: calc(100% - 30px);
+            height: calc(100% - 115px);
 
             margin: -17px 0 0 -1px;
             padding: 15px 0;
@@ -165,12 +184,36 @@ header {
                 scrollbar-width: none;
             }
         }
+        .code-editor-section.active {
+            display: none !important;
+        }
+
+        .info-section {
+            background-color: var(--color-black-light);
+            width: calc(100% - 30px);
+            height: 110%;
+
+            padding: 15px;
+            border: 1px solid var(--color-gray-dark);
+
+            border-radius: 0 0 10px 10px;
+
+            display: none;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .info-section.active {
+            display: flex;
+        }
     }
 
     /* ===== left ===== */
     .left-section {
         width: 60% !important;
         border-radius: 10px;
+        border: 1px solid var(--color-black);
         overflow: hidden;
         height: 100%;
 
@@ -178,7 +221,8 @@ header {
             width: 100%;
             height: 100%;
 
-            border: none;
+            border: 1px solid var(--color-black);
+            border-radius: 10px;
         }
     }
 }

@@ -1,7 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import * as labels from './../components/label';
 import * as scripts from './../scripts/script';
+
 import codeIcon from './../assets/icons/code.png';
+import terminalIcon from './../assets/icons/terminal.png';
+
 
 export function Code({ html, css, js, setHtml, setCss, setJs }) {
   const [activeTab, setActiveTab] = useState('html');
@@ -79,7 +82,9 @@ export function Code({ html, css, js, setHtml, setCss, setJs }) {
   return (
     <section className="right-section">
       <div className="hero">
-        <labels.icon_label text="code" icon={codeIcon} />
+        <labels.icon_label text="Download program" icon={terminalIcon} />
+
+        <div className="open-source">gh repo clone sharky-2/code-view</div>
 
         <nav className="button-section">
           <button
@@ -126,6 +131,11 @@ export function Code({ html, css, js, setHtml, setCss, setJs }) {
           onScroll={syncScroll}
           placeholder={`Write your ${activeTab.toUpperCase()} here...`}
         />
+      </div>
+
+      <div className="info-section">
+          <h1>Lorem ipsum</h1>
+          <labels>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</labels>
       </div>
     </section>
   );

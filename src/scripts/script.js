@@ -1,15 +1,26 @@
 // =============================================
 // ===== Toggle Header =====
-let toggle_button = false;
+export function toggle(value) {
+  const sections = {
+    header_button: document.querySelector(".selected-button"),
+    buttons: document.querySelector(".button-section"),
+    code_editor: document.querySelector(".code-editor-section"),
+    hero: document.querySelector(".hero"),
+    info: document.querySelector(".info-section"),
+  };
 
-export function toggle() {
-  const selected_button = document.querySelector(".selected-button");
-  if (toggle_button) {
-    selected_button.style.transform = "translate(107%, -50%)";
-    toggle_button = !toggle_button;
+  if (value === "code") {
+    sections.header_button.classList.remove("active")
+    sections.buttons.classList.remove("active")
+    sections.hero.classList.remove("active")
+    sections.code_editor.classList.remove("active")
+    sections.info.classList.remove("active")
   } else {
-    selected_button.style.transform = "translate(0%, -50%)";
-    toggle_button = !toggle_button; 
+    sections.header_button.classList.add("active")
+    sections.buttons.classList.add("active")
+    sections.hero.classList.add("active")
+    sections.code_editor.classList.add("active")
+    sections.info.classList.add("active")
   }
 }
 

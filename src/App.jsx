@@ -17,7 +17,7 @@ const App = () => {
 
   const [css, setCss] = useState(`/* ===== body ===== */
 body {
-  background: #fff;
+  background: #100c0c;
   display: flex;
   height: 100vh;
   justify-content: center;

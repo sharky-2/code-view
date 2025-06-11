@@ -9,7 +9,6 @@ import * as scripts from './../scripts/script'
 import logo from './../assets/icons/logo_white.png';
 import code from './../assets/icons/code.png';
 import info from './../assets/icons/info.png';
-import notes from './../assets/icons/notes.png';
 
 export function Header() {
     return (
@@ -22,8 +21,12 @@ export function Header() {
             {/* Toggle */}
             <div className="toggle">
                 <div className="selected-button"></div>
-                <button.icon_button icon={code} text="Code" onClick={scripts.toggle} />
-                <button.icon_button icon={info} text="Info" onClick={scripts.toggle} />
+                <button.icon_button icon={code} text="Code" onClick={ () => {
+                    scripts.toggle('code');
+                }} />
+                <button.icon_button icon={info} text="Info" onClick={ () => {
+                    scripts.toggle('info');
+                }} />
             </div>
 
             {/* Get project */}
