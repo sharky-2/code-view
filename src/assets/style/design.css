@@ -1,6 +1,6 @@
 body {
-    background-color: var(--color-black);
-    color: var(--color-white);
+    background-color: var(--colors-surface1);
+    color: var(--colors-black);
     padding: 20px;
     margin: 0;
 
@@ -13,6 +13,8 @@ body {
         height: calc(100vh - 100px);
     }
 
+    img {filter: brightness(0%) invert(0);}
+
     /* ============================================= */
     /* ===== titles ===== */
     h1 {margin: 0;}
@@ -20,10 +22,12 @@ body {
     /* ============================================= */
     /* ===== buttons ===== */
     button {cursor: pointer;}
+
     .icon-button {
         background: none;
         border: none;
-        color: var(--color-white);
+        color: var(--colors-black);
+        font-weight: bold;
         width: 70px;
 
         padding: 5px;
@@ -47,7 +51,8 @@ body {
             var(--color-blue-dark)
         );
         border: none;
-        color: var(--color-white);
+        color: var(--colors-surface1);
+        font-weight: bold;
         padding: 5px 20px 5px 20px;
         height: calc(100% + 6px);
 

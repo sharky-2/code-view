@@ -35,3 +35,9 @@ export function toggle_script(value) {
     }
   });
 }
+
+// =============================================
+// ===== Copy Code =====
+export function copy_code(textarea) {
+  navigator.clipboard.writeText(textarea.value);
+}

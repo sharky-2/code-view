@@ -3,8 +3,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 import * as labels from './../components/label';
+import * as button from './../components/buttons';
 
 import terminalIcon from './../assets/icons/terminal.png';
+import terminalCopy from './../assets/icons/copy.png';
 
 import * as scripts from './../scripts/script';
 
@@ -132,6 +134,15 @@ export function Code({ html, css, js, setHtml, setCss, setJs }) {
           ))}
         </div>
 
+        <div className="copy-code">
+          <button.icon_button icon={terminalCopy} text={"copy"} 
+            onClick={() => {
+              const textarea = document.querySelector(`.${activeTab}-textarea`);
+              scripts.copy_code(textarea);
+            }} 
+          />
+        </div>
+
         <textarea
           ref={textareaRef}
           className={`${activeTab}-textarea`}
@@ -145,8 +156,9 @@ export function Code({ html, css, js, setHtml, setCss, setJs }) {
 
       {/* ===== info section ===== */}
       <div className="info-section">
-          <h1>Lorem ipsum</h1>
-          <labels>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</labels>
+          <labels>Demo version — exciting features coming soon!</labels>
+          <labels>This is just the beginning — stay tuned for more updates!</labels>
+          <labels>New features on the way — keep an eye out!</labels>
       </div>
     </section>
   );

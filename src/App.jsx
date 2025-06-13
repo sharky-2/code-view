@@ -13,14 +13,14 @@ const App = () => {
   New features on the way — keep an eye out!
 -->
 
-<h1 class="shimmer-text" id="title-btn">
+<div class="shimmer-text" id="title-btn">
   click me: <span id="count">0</span>
-</h1>
+</div>
 `);
 
   const [css, setCss] = useState(`/* ===== body ===== */
 body {
-  background: #100c0c;
+  background: white;
   color: white;
   display: flex;
   height: 100vh;

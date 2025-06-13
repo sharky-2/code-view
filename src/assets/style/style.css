@@ -30,7 +30,7 @@ header {
 
     /* ===== toggle ===== */
     .toggle {
-        background-color: var(--color-gray-dark);
+        background-color: var(--colors-surface3);
         padding: 3px;
         border-radius: 8px;
         height: 100%;
@@ -43,7 +43,7 @@ header {
         position: relative;
 
         .selected-button {
-            background: var(--color-black);
+            background: var(--colors-surface1);
             width: calc(50% - 6px);
             height: calc(100% - 6px);
             border-radius: 5px;
@@ -53,7 +53,7 @@ header {
             left: 2.5%;
             top: 50%;
             transform: translate(0%, -50%);
-
+            box-shadow: 0 0 10px var(--colors-surface4);   
             transition: all .3s;
         }
         .selected-button.active {
@@ -76,20 +76,25 @@ header {
 
     /* ===== right ===== */
     .right-section {
-        border: 1px solid var(--color-gray-dark);
+        background-color: var(--colors-surface3);
+        border: 1px solid var(--colors-surface4);
         border-radius: 10px;
-        width: 40%;
-        height: calc(100% - 105px);
+        width: 30%;
+        height: fit-content;
 
         .hero {
             width: calc(100% - 40px);
             height: 187px;
             padding: 20px 20px 0 20px;
 
+            font-weight: bold;
+            z-index: 10;
+
             /* ===== source ===== */
             .open-source {
-                background: var(--color-black-light) !important;
-                border: 1px solid var(--color-gray-dark);
+                background: #151515 !important;
+                color: var(--colors-surface1);
+                border: 1px solid var(--colors-surface4);
                 border-radius: 10px;
                 padding: 20px 20px;
                 
@@ -108,15 +113,13 @@ header {
     
                 button {
                     background: none;
-                    border-left: 1px solid var(--color-black);
-                    border-top: 1px solid var(--color-black);
-                    border-right: 1px solid var(--color-black);
-                    border-bottom: none;
+                    border: none;
                     border-radius: 5px 5px 0 0;
     
                     height: 35px;
                     width: fit-content;
-                    color: var(--color-white);
+                    color: var(--colors-surface4);
+                    font-weight: bold;
     
                     transition: all .1s;
                 }
@@ -124,10 +127,11 @@ header {
                 .html-button.active,
                 .css-button.active,
                 .js-button.active {
-                    background-color: var(--color-black);
-                    border-top: 1px solid var(--color-gray-dark) !important;
-                    border-left: 1px solid var(--color-gray-dark) !important;
-                    border-right: 1px solid var(--color-gray-dark) !important;
+                    background-color: var(--colors-surface1);
+                    border-top: 1px solid var(--colors-surface4) !important;
+                    border-left: 1px solid var(--colors-surface4) !important;
+                    border-right: 1px solid var(--colors-surface4) !important;
+                    color: var(--colors-black);
                     border-bottom: none !important;
                 }
             }
@@ -141,19 +145,22 @@ header {
 
         /* ===== code ===== */
         .code-editor-section {
-            background-color: var(--color-black);
+            background-color: var(--colors-surface1);
             width: 100%;
-            height: calc(100% - 115px);
+            height: calc(79vh - 115px);
 
             margin: -17px 0 0 -1px;
             padding: 15px 0;
-            border: 1px solid var(--color-gray-dark);
+            border: 1px solid var(--colors-surface4);
 
             border-radius: 0 0 10px 10px;
+            z-index: 5;
 
             display: flex;
             justify-content: center;
             align-items: center;
+
+            position: relative;
 
             /* ===== line number ===== */
             .line-numbers {
@@ -163,6 +170,23 @@ header {
                 height: 100%;
                 overflow: hidden;
                 padding: 10px;
+            }
+
+            /* ===== copy code ===== */
+            .copy-code {
+                position: absolute;
+                background-color: var(--colors-surface1);
+                border: 1px solid var(--colors-surface4);
+                border-radius: 5px;
+
+                top: 10px;
+                right: 10px;
+
+                transition: all .3s;
+                /* ===== elements ===== */
+                &:active     {
+                    transform: scale(.9);
+                }
             }
 
             /* ===== textarea ===== */
@@ -191,7 +215,6 @@ header {
         .info-section {
             background-color: var(--color-black-light);
             width: calc(100% - 40px);
-            height: 110%;
 
             padding: 20px;
             border: 1px solid var(--color-gray-dark);
@@ -211,7 +234,7 @@ header {
 
     /* ===== left ===== */
     .left-section {
-        width: 60% !important;
+        width: 70% !important;
         border-radius: 10px;
         border: 1px solid var(--color-black);
         overflow: hidden;
