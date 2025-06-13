@@ -7,13 +7,7 @@ import { Preview } from './components/preview';
 import { Code } from './components/code';
 
 const App = () => {
-  const [html, setHtml] = useState(`<!-- ===== info ===== 
-  Demo version — exciting features coming soon! 
-  This is just the beginning — stay tuned for more updates!
-  New features on the way — keep an eye out!
--->
-
-<div class="shimmer-text" id="title-btn">
+  const [html, setHtml] = useState(`<div class="shimmer-text" id="title-btn">
   click me: <span id="count">0</span>
 </div>
 `);
