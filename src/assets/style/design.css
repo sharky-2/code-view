@@ -13,8 +13,6 @@ body {
         height: calc(100vh - 100px);
     }
 
-    img {filter: brightness(0%) invert(0);}
-
     /* ============================================= */
     /* ===== titles ===== */
     h1 {margin: 0;}

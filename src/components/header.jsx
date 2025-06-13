@@ -5,6 +5,7 @@ import * as button from './buttons'
 import * as scripts from './../scripts/script'
 
 import logo from './../assets/icons/logo_white.png';
+import logoBlack from './../assets/icons/logo_black.png';
 import code from './../assets/icons/code.png';
 import info from './../assets/icons/info.png';
 
@@ -15,7 +16,7 @@ export function Header() {
         <header>
             
             {/* ===== Company ===== */}
-            <img src={logo} />
+            <img src={logoBlack} />
             <label className='slash'>/</label>
             <label className='name'>Code-View</label>
 
