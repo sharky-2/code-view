@@ -89,7 +89,7 @@ header {
 
         .hero {
             width: calc(100% - 40px);
-            height: 187px;
+            height: fit-content;
             padding: 20px 20px 0 20px;
 
             font-weight: bold;
@@ -109,7 +109,7 @@ header {
             /* ===== button ===== */
             .button-section {
                 width: 100%;
-                height: fit-content;
+                height: 50px;
                 
                 display: flex;
                 justify-content: start;
